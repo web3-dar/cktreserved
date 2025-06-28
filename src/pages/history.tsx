@@ -86,16 +86,29 @@ const TransactionHistory: React.FC = () => {
         </div>
 
         {/* Summary */}
-        <div className="grid grid-cols-2 gap-4 mb-6">
-          <div className="bg-white p-4 rounded-xl shadow-md">
-            <h2 className="text-sm text-gray-500">Inflow</h2>
-            <p className="text-xl font-bold text-green-600">+${inflow.toFixed(2)}</p>
-          </div>
-          <div className="bg-white p-4 rounded-xl shadow-md">
-            <h2 className="text-sm text-gray-500">Outflow</h2>
-            <p className="text-xl font-bold text-red-600">-${outflow.toFixed(2)}</p>
-          </div>
-        </div>
+       <div className="grid grid-cols-2 gap-4 mb-6">
+  <div className="bg-white p-4 rounded-xl shadow-md">
+    <h2 className="text-sm text-gray-500">Inflow</h2>
+    <p className="text-xl font-bold text-green-600">
+      +
+      {new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+      }).format(inflow)}
+    </p>
+  </div>
+  <div className="bg-white p-4 rounded-xl shadow-md">
+    <h2 className="text-sm text-gray-500">Outflow</h2>
+    <p className="text-xl font-bold text-red-600">
+      -
+      {new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+      }).format(outflow)}
+    </p>
+  </div>
+</div>
+
 
         {/* All Transactions (Credit & Debit) */}
         <div className="space-y-4">
