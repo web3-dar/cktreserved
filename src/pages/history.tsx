@@ -57,7 +57,7 @@ const TransactionHistory: React.FC = () => {
         {
           type: "Credit",
           amount: 1000000,
-          label: "Company Name ",
+          label: "UNITED FEDERAL INSURANCE CORPORATION (UFIC)",
           icon: "💸",
           date: "2025-06-25 10:00:00",
         },
