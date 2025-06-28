@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import cardLogo from '../assets/chip.png'; // Example for Visa/MasterCard logo
 import { FaCreditCard } from 'react-icons/fa';
 import BottomNav from './stickyNav';
+import BottomNav2 from './bottomnav2';
 
 const MyCards = () => {
   const [selectedDetail, setSelectedDetail] = useState<string | null>(null);
@@ -111,6 +112,7 @@ const MyCards = () => {
         </div>
       </div>
       <BottomNav />
+      <BottomNav2/>
     </>
   );
 };

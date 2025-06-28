@@ -33,9 +33,10 @@ const Home: React.FC = () => {
    
     <HelpSection/>
     
-    <div className='w-full '>
-       <img src={hero} alt="" />
-    </div>
+    <div className="w-full flex justify-center">
+  <img src={hero} alt="Hero" className="max-w-full h-auto" />
+</div>
+
     {/* <CustomerCommunications/>
     <Blog/>
     <BlogSection/> */}

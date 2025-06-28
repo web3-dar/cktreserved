@@ -119,7 +119,7 @@ const SendMoney = () => {
                   <div className="flex items-center space-x-2">
                     <FaCreditCard className="text-red-600 text-xl" />
                     <div>
-                      <p className="text-sm text-gray-700 font-medium">Credit Card</p>
+                      <p className="text-sm text-gray-700 font-medium">Debit Card</p>
                       <p className="text-xs text-gray-500">**** **** **** 4900</p>
                     </div>
                   </div>

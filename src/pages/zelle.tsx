@@ -3,6 +3,7 @@ import zelle from '../assets/images_017.png'
 import send from '../assets/send.png'
 import receive from '../assets/rece.png'
 import BottomNav from './stickyNav';
+import BottomNav2 from './bottomnav2';
 // import icon from '../assets/bank.png'
 
 const ZellePage = () => {
@@ -56,6 +57,7 @@ const ZellePage = () => {
       </div>
     </div>
     <BottomNav/>
+    <BottomNav2/>
     </>
   );
 };

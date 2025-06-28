@@ -25,6 +25,7 @@ import bg from "../assets/her2.jpg"; // your uploaded image
 // import BottomNav from "./stickyNav";
 import person from '../assets/person_1.jpg'
 import BottomNav from "./stickyNav";
+import BottomNav2 from "./bottomnav2";
 // import { sub } from "date-fns";
 
 // import Blog from "../Home/blog";
@@ -247,47 +248,48 @@ const Dashboard = () => {
 
     </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-1 gap-2 p-2">
-                <button
-                  className="flex items-center text-red-600 p-2 bg-purple-50 rounded-lg shadow"
-                  onClick={() => navigate("/send")}
-                >
-                  <div className="bg-purple-100 p-2 rounded-lg">
-                    <span className="material-icons">send</span>
-                  </div>
-                  <p className="ml-2 text-sm font-semibold">Send Money</p>
-                </button>
+     <div className="grid grid-cols-2 gap-2 p-2 lg:flex lg:flex-wrap lg:gap-3">
+  <button
+    className="flex items-center text-red-600 p-2 bg-purple-50 rounded-lg shadow w-full lg:w-[48%]"
+    onClick={() => navigate("/send")}
+  >
+    <div className="bg-purple-100 p-2 rounded-lg">
+      <span className="material-icons">send</span>
+    </div>
+    <p className="ml-2 text-sm font-semibold">Send Money</p>
+  </button>
 
-                <button
-                  className="flex items-center text-pink-600 p-2 bg-pink-50 rounded-lg shadow"
-                  onClick={() => navigate("/deposit")}
-                >
-                  <div className="bg-red-500 p-2 rounded-lg">
-                    <span className="material-icons text-white">add</span>
-                  </div>
-                  <p className="ml-2 text-sm font-semibold">Add Money</p>
-                </button>
+  <button
+    className="flex items-center text-pink-600 p-2 bg-pink-50 rounded-lg shadow w-full lg:w-[48%]"
+    onClick={() => navigate("/deposit")}
+  >
+    <div className="bg-red-500 p-2 rounded-lg">
+      <span className="material-icons text-white">add</span>
+    </div>
+    <p className="ml-2 text-sm font-semibold">Add Money</p>
+  </button>
 
-                <button
-                  className="flex items-center text-yellow-600 p-2 bg-yellow-50 rounded-lg shadow"
-                  onClick={() => navigate("/loan")}
-                >
-                  <div className="bg-yellow-100 p-2 rounded-lg">
-                    <span className="material-icons">account_balance_wallet</span>
-                  </div>
-                  <p className="ml-2 text-sm font-semibold">Loan</p>
-                </button>
+  <button
+    className="flex items-center text-yellow-600 p-2 bg-yellow-50 rounded-lg shadow w-full lg:w-[48%]"
+    onClick={() => navigate("/loan")}
+  >
+    <div className="bg-yellow-100 p-2 rounded-lg">
+      <span className="material-icons">account_balance_wallet</span>
+    </div>
+    <p className="ml-2 text-sm font-semibold">Loan</p>
+  </button>
 
-                <button
-                  className="flex items-center text-green-600 p-2 bg-green-50 rounded-lg shadow"
-                  onClick={() => navigate("/overview")}
-                >
-                  <div className="bg-green-100 p-2 rounded-lg">
-                    <span className="material-icons">help</span>
-                  </div>
-                  <p className="ml-2 text-sm font-semibold">Need Help?</p>
-                </button>
-              </div>
+  <button
+    className="flex items-center text-green-600 p-2 bg-green-50 rounded-lg shadow w-full lg:w-[48%]"
+    onClick={() => navigate("/overview")}
+  >
+    <div className="bg-green-100 p-2 rounded-lg">
+      <span className="material-icons">help</span>
+    </div>
+    <p className="ml-2 text-sm font-semibold">Need Help?</p>
+  </button>
+</div>
+
 
 
 
@@ -435,6 +437,7 @@ const Dashboard = () => {
 
 {/* <StatComponent /> */}
 <BottomNav/>
+<BottomNav2/>
 {/* <Blog/> */}
     </>
   );

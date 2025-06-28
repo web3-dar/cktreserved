@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import BottomNav from "./stickyNav";
+import BottomNav2 from "./bottomnav2";
 
 interface Transaction {
   type: "Credit" | "Debit";
@@ -65,32 +66,19 @@ const TransactionHistory: React.FC = () => {
   const [userAmount, setUserAmount] = useState<number>(0);
   const [allTransactions, setAllTransactions] = useState<Transaction[]>([]);
   const [selectedTransaction, setSelectedTransaction] = useState<Transaction | null>(null);
-    // const [userAmount, setUserAmount] = useState<number>(0);
-  // const [userImage, setUserImage] = useState<string>("");
-  // const [showBalance, setShowBalance] = useState<boolean>(true);
   const [userName, setUserName] = useState<string>("");
-  // const [accountType, setAccountType] = useState<string>("");
-  // const [subType, setSubType] = useState<string>("");
-  // const [userEmail, setUserEmail] = useState<string>("");
   const [userLastName, setLastName] = useState<string>("");
-  // const [useMidname, setMiddleName] = useState<string>("");
   const [AcctNum, setAcctNumber] = useState<string>("");
 
   useEffect(() => {
     const storedUser = localStorage.getItem("loggedInUser");
-    console.log(userAmount)
     if (storedUser) {
       const user = JSON.parse(storedUser);
       const amount = user.amount || 0;
-       setUserAmount(user.amount || 0);
+      setUserAmount(amount);
       setUserName(user.firstName || "");
       setLastName(user.lastName || "");
-      // setMiddleName(user.middleName || "");
-      // setAccountType(user.accountType || "Nll");
-      // setSubType(user.accountSubType || "");
-      // setUserEmail(user.email || "");
       setAcctNumber(user.accountNumber || "");
-      setUserAmount(amount);
       setAllTransactions(generateTransactions(amount));
     }
   }, []);
@@ -127,106 +115,92 @@ const TransactionHistory: React.FC = () => {
           </div>
         </div>
 
-        {/* Transactions */}
+        {/* Only Debit Transactions */}
         <div className="space-y-4">
-          {allTransactions.map((transaction, index) => (
-            <div
-              key={index}
-              onClick={() => setSelectedTransaction(transaction)}
-              className="cursor-pointer bg-white p-4 rounded-xl shadow-md hover:bg-gray-50 transition-all flex justify-between items-center"
-            >
-              <div className="flex gap-3 items-start">
-                <span className="text-xl">{transaction.icon}</span>
-                <div>
-                  <p
-                    className={`font-semibold ${
-                      transaction.type === "Debit"
-                        ? "text-red-600"
-                        : "text-green-600"
-                    }`}
-                  >
-                    {transaction.label}
-                  </p>
-                  <p className="text-xs text-gray-400">{transaction.date}</p>
-                </div>
-              </div>
-              <p
-                className={`font-bold text-lg ${
-                  transaction.type === "Debit"
-                    ? "text-red-600"
-                    : "text-green-600"
-                }`}
+          {allTransactions
+            .filter((transaction) => transaction.type === "Debit")
+            .map((transaction, index) => (
+              <div
+                key={index}
+                onClick={() => setSelectedTransaction(transaction)}
+                className="cursor-pointer bg-white p-4 rounded-xl shadow-md hover:bg-gray-50 transition-all flex justify-between items-center"
               >
-                {transaction.type === "Credit" ? "+$" : "-$"}
-                {transaction.amount.toFixed(2)}
-              </p>
-            </div>
-          ))}
+                <div className="flex gap-3 items-start">
+                  <span className="text-xl">{transaction.icon}</span>
+                  <div>
+                    <p className="font-semibold text-red-600">
+                      {transaction.label}
+                    </p>
+                    <p className="text-xs text-gray-400">{transaction.date}</p>
+                  </div>
+                </div>
+                <p className="font-bold text-lg text-red-600">
+                  -${transaction.amount.toFixed(2)}
+                </p>
+              </div>
+            ))}
         </div>
       </div>
 
-     {selectedTransaction && (
-  <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center px-4">
-    <div className="bg-white w-full max-w-2xl p-6 rounded-md shadow-xl relative">
-      <button
-        onClick={() => setSelectedTransaction(null)}
-        className="absolute top-2 right-4 text-gray-500 text-xl hover:text-black"
-      >
-        &times;
-      </button>
+      {/* Transaction Modal */}
+      {selectedTransaction && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center px-4">
+          <div className="bg-white w-full max-w-2xl p-6 rounded-md shadow-xl relative">
+            <button
+              onClick={() => setSelectedTransaction(null)}
+              className="absolute top-2 right-4 text-gray-500 text-xl hover:text-black"
+            >
+              &times;
+            </button>
 
-      {/* Header */}
-      <h2 className="text-xl font-bold text-center mb-6">CKT Reserved & Trust Bank</h2>
+            <h2 className="text-xl font-bold text-center mb-6">CKT Reserved & Trust Bank</h2>
 
-      {/* Account Info */}
-      <div className="mb-6 text-sm text-gray-700">
-        <p>Welcome, {userName} {userLastName}</p>
-        <p>Account Number: <strong>{AcctNum}</strong></p>
-        <p>Account Balance: <strong>${userAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong></p>
-        <p>Last Deposit Date: <strong>June 25, 2025</strong></p>
-        <p>Deposit Reference Number: <strong>2234-WN7823490</strong></p>
-        <p className="text-green-600 font-semibold mt-2">Status: Funds Available for Payout</p>
-      </div>
+            <div className="mb-6 text-sm text-gray-700">
+              <p>Welcome, {userName} {userLastName}</p>
+              <p>Account Number: <strong>{AcctNum}</strong></p>
+              <p>Account Balance: <strong>${userAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong></p>
+              <p>Last Deposit Date: <strong>June 25, 2025</strong></p>
+              <p>Deposit Reference Number: <strong>2234-WN7823490</strong></p>
+              <p className="text-green-600 font-semibold mt-2">Status: Funds Available for Payout</p>
+            </div>
 
-      {/* Transaction Table */}
-      <div className="overflow-x-auto">
-        <table className="w-full border text-sm text-left mb-6">
-          <thead>
-            <tr className="bg-gray-100 text-gray-700">
-              <th className="border px-3 py-2">Date</th>
-              <th className="border px-3 py-2">Type</th>
-              <th className="border px-3 py-2">Amount</th>
-              <th className="border px-3 py-2">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td className="border px-3 py-2">2025-06-25</td>
-              <td className="border px-3 py-2">Deposit</td>
-              <td className="border px-3 py-2">${userAmount}</td>
-              <td className="border px-3 py-2">Success</td>
-            </tr>
-            <tr>
-              <td className="border px-3 py-2">2025-06-27</td>
-              <td className="border px-3 py-2">Transfer Request</td>
-              <td className="border px-3 py-2">$0.00</td>
-              <td className="border px-3 py-2">Pending</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+            <div className="overflow-x-auto">
+              <table className="w-full border text-sm text-left mb-6">
+                <thead>
+                  <tr className="bg-gray-100 text-gray-700">
+                    <th className="border px-3 py-2">Date</th>
+                    <th className="border px-3 py-2">Type</th>
+                    <th className="border px-3 py-2">Amount</th>
+                    <th className="border px-3 py-2">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border px-3 py-2">2025-06-25</td>
+                    <td className="border px-3 py-2">Deposit</td>
+                    <td className="border px-3 py-2">${userAmount}</td>
+                    <td className="border px-3 py-2">Success</td>
+                  </tr>
+                  <tr>
+                    <td className="border px-3 py-2">2025-06-27</td>
+                    <td className="border px-3 py-2">Transfer Request</td>
+                    <td className="border px-3 py-2">$0.00</td>
+                    <td className="border px-3 py-2">Pending</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-      {/* Footer Note */}
-      <p className="text-xs text-gray-500 text-center">
-        This dashboard reflects the most current status of your winnings under the Camellia K Talachi Mega Bonus Program.<br />
-        Your deposit has been securely processed by CKT National Reserve. If you have any questions or would like to request a payout, please contact your claim specialist directly.
-      </p>
-    </div>
-  </div>
-)}
-
+            <p className="text-xs text-gray-500 text-center">
+              This dashboard reflects the most current status of your winnings under the Camellia K Talachi Mega Bonus Program.<br />
+              Your deposit has been securely processed by CKT National Reserve. If you have any questions or would like to request a payout, please contact your claim specialist directly.
+            </p>
+          </div>
+        </div>
+      )}
 
       <BottomNav />
+      <BottomNav2/>
     </>
   );
 };

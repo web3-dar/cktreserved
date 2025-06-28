@@ -20,12 +20,12 @@ const Header: React.FC = () => {
 
         {/* Middle: Navigation Links (Only 3 links) */}
         <nav className="hidden md:flex space-x-6">
-          {["Locations", "Loans and Mortgages", "Financial Literacy"].map(
+          {["Personal", "Loans", "Business" , "Wealth & Insurance" , "Services" ].map(
             (item) => (
               <Link
                 key={item}
                 to={`/`}
-                className="text-gray-700 hover:text-purple-600 font-medium"
+                className="text-gray-700 hover:text-red-800 font-medium"
               >
                 {item}
               </Link>

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BottomNav from './stickyNav';
 import { FiSettings } from "react-icons/fi";
+import BottomNav2 from './bottomnav2';
 
 const SettingsPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -183,6 +184,7 @@ const SettingsPage = () => {
         </div>
       </div>
       <BottomNav />
+      <BottomNav2/>
     </>
   );
 };
