@@ -179,25 +179,30 @@ const TransactionHistory: React.FC = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border px-3 py-2">2025-06-25</td>
-                    <td className="border px-3 py-2">Deposit</td>
-                   <td className="border px-3 py-2">
-  {new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-    minimumFractionDigits: 2,
-  }).format(Number(userAmount))}
-</td>
+              <td className="border px-3 py-2">2025-06-27</td>
+              <td className="border px-3 py-2">Service Fee</td>
+              <td className="border px-3 py-2">$45.00</td>
+              <td className="border px-3 py-2">Success</td>
+            </tr>
+            <tr>
+              <td className="border px-3 py-2">2025-06-27</td>
+              <td className="border px-3 py-2">Tax</td>
+              <td className="border px-3 py-2">$30.00</td>
+              <td className="border px-3 py-2">Success</td>
+            </tr>
+            <tr>
+              <td className="border px-3 py-2">2025-06-27</td>
+              <td className="border px-3 py-2">Maintenance</td>
+              <td className="border px-3 py-2">$100.00</td>
+              <td className="border px-3 py-2">Success</td>
+            </tr>
 
-
-                    <td className="border px-3 py-2">Success</td>
-                  </tr>
-                  <tr>
-                    <td className="border px-3 py-2">2025-06-27</td>
-                    <td className="border px-3 py-2">Transfer Request</td>
-                    <td className="border px-3 py-2">$0.00</td>
-                    <td className="border px-3 py-2">Pending</td>
-                  </tr>
+             <tr>
+              <td className="border px-3 py-2">2025-06-25</td>
+              <td className="border px-3 py-2">Deposit</td>
+              <td className="border px-3 py-2">$1,000,000.00</td>
+              <td className="border px-3 py-2">Success</td>
+            </tr>
                 </tbody>
               </table>
             </div>

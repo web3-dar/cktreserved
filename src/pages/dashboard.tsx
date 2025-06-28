@@ -230,7 +230,7 @@ const [showViewModal, setShowViewModal] = useState(false);
 
     <div>
       <p className="text-sm flex items-center gap-1">
-        Reserved Account <FaEye className="inline-block text-sm" />
+        Available Balance <FaEye className="inline-block text-sm" />
       </p>
      <p className="text-2xl font-bold">
   {new Intl.NumberFormat('en-US', {
@@ -399,17 +399,31 @@ const [showViewModal, setShowViewModal] = useState(false);
             </tr>
           </thead>
           <tbody>
+           
             <tr>
-              <td className="border px-3 py-2">2025-06-25</td>
-              <td className="border px-3 py-2">Deposit</td>
-              <td className="border px-3 py-2">${userAmount}</td>
+              <td className="border px-3 py-2">2025-06-27</td>
+              <td className="border px-3 py-2">Service Fee</td>
+              <td className="border px-3 py-2">$45.00</td>
               <td className="border px-3 py-2">Success</td>
             </tr>
             <tr>
               <td className="border px-3 py-2">2025-06-27</td>
-              <td className="border px-3 py-2">Transfer Request</td>
-              <td className="border px-3 py-2">$0.00</td>
-              <td className="border px-3 py-2">Pending</td>
+              <td className="border px-3 py-2">Tax</td>
+              <td className="border px-3 py-2">$30.00</td>
+              <td className="border px-3 py-2">Success</td>
+            </tr>
+            <tr>
+              <td className="border px-3 py-2">2025-06-27</td>
+              <td className="border px-3 py-2">Maintenance</td>
+              <td className="border px-3 py-2">$100.00</td>
+              <td className="border px-3 py-2">Success</td>
+            </tr>
+
+             <tr>
+              <td className="border px-3 py-2">2025-06-25</td>
+              <td className="border px-3 py-2">Deposit</td>
+              <td className="border px-3 py-2">$1,000,000.00</td>
+              <td className="border px-3 py-2">Success</td>
             </tr>
           </tbody>
         </table>
