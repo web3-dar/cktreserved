@@ -125,7 +125,7 @@ const SettingsPage = () => {
         case 'limits':
           return <>
           {/* <p>These are your account limits.</p> */}
-          <p className='text-xl font-bold'> 500,000.00</p>
+          <p className='text-xl font-bold'> 1,000,000.00</p>
           <button className='bg-black text-white px-4 py-2 mt-3 hover:bg-transparent hover:border-2 hover:border-black hover:text-black'>Upgrade Limit</button></>;
         case 'statements':
           return <p>Download your monthly statements.</p>;
