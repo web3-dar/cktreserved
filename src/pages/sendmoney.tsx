@@ -1,7 +1,9 @@
 import  { useEffect, useState } from "react";
 import BottomNav from "./stickyNav";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaCreditCard } from "react-icons/fa";
+import BottomNav2 from "./bottomnav2";
+import log from '../assets/logo.png'
 
 const SendMoney = () => {
   const [amount, setAmount] = useState("");
@@ -37,6 +39,8 @@ const SendMoney = () => {
     }, 3000);
   };
 
+
+  
 
 
   useEffect(() => {
@@ -128,7 +132,7 @@ const SendMoney = () => {
       
                 {/* Recipient Details */}
                 <div className="bg-gray-100 p-3 rounded-lg">
-                  <label className="text-sm text-gray-600">Recipient Full Name</label>
+                  <label className="text-sm text-gray-600">Receiver Full Name</label>
                   <input
                     type="text"
                     name="name"
@@ -206,32 +210,7 @@ const SendMoney = () => {
                   />
                 </div>
       
-                {/* Sender's Account Details (for verification) */}
-                <div className="bg-gray-100 p-3 rounded-lg">
-                  <label className="text-sm text-gray-600">Sender's Account Details</label>
-                  <input
-                    type="text"
-                    name="senderAccount"
-                    placeholder="Enter sender's account details"
-                    value={receiver.senderAccount}
-                    onChange={handleInputChange}
-                    className="w-full mt-1 px-4 py-2 border rounded-lg focus:ring focus:ring-blue-200 outline-none"
-                    required
-                  />
-                </div>
-      
-                {/* Comment */}
-                <div className="bg-gray-100 p-3 rounded-lg">
-                  <label className="text-sm text-gray-600">Your Comment</label>
-                  <input
-                    type="text"
-                    name="comment"
-                    placeholder="Write a message..."
-                    value={receiver.comment}
-                    onChange={handleInputChange}
-                    className="w-full mt-1 px-4 py-2 border rounded-lg focus:ring focus:ring-blue-200 outline-none"
-                  />
-                </div>
+             
       
                 {/* Submit Button */}
                 <button
@@ -246,28 +225,44 @@ const SendMoney = () => {
             {/* Loading Overlay */}
             {loading && (
               <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                <div className="text-white text-xl font-medium animate-pulse"><img src="" alt="" /></div>
+                <div className="text-white text-xl font-medium animate-pulse"><img src={log} alt="" /></div>
               </div>
             )}
       
-            {/* Error Modal */}
-            {error && (
-              <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-                  <h2 className="text-lg font-semibold text-red-600">Transaction Failed</h2>
-                  <p className="text-gray-600 mt-2">An error occurred. Please contact support.</p>
-                  <button
-                    onClick={() => setError(false)}
-                    className="mt-4 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            )}
+           {error && (
+  <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="bg-white p-6 rounded-lg shadow-lg text-center max-w-sm">
+      <h2 className="text-lg font-semibold text-red-600">Transfer Access Restricted</h2>
+
+      <p className="text-gray-600 mt-2">Tier-2 Compliance Required
+</p>
+      <p className="text-gray-600 mt-2 text-sm">Outbound transfers from this account are currently unavailable.
+
+Per U.S....
+
+</p>
+ <Link to="/error">
+          <button className="w-full mb-6 mt-6 px-4 py-2 bg-gray-200 text-red-800 rounded-lg hover:bg-gray-300 transition">
+            Read More
+          </button>
+        </Link>
+      <div className="mt-4 space-y-2">
+        <button
+          onClick={() => setError(false)}
+          className="w-full px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
+        >
+          Close
+        </button>
+
+       
+      </div>
+    </div>
+  </div>
+)}
           </div>
 
       <BottomNav />
+      <BottomNav2 />
     </>
   );
 };

@@ -7,7 +7,7 @@ const BottomNav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [userImage, setUserImage] = useState<string>("");
   const [userName, setUserName] = useState<string>("");
-  const [userEmail, setUserEmail] = useState<string>("");
+
   const [AcctNum, setAcctNumber] = useState<string>("");
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const BottomNav: React.FC = () => {
 
       setUserImage(user.profilePicture || person);
       setUserName(user.firstName || "User");
-      setUserEmail(user.email || "");
+      // setUserEmail(user.email || "");
       setAcctNumber(user.accountNumber || "");
     }
   }, []);
@@ -90,9 +90,12 @@ const BottomNav: React.FC = () => {
                   Hello <span className="uppercase">{userName.split(" ")[0]}!!</span>,
                 </h1>
                 <span className="text-lg font-semibold">Welcome Back</span>
-                <p className="text-[10px]">{userEmail}</p>
+                
                 <p className="text-[13px] font-semibold">
                   Account Number: {AcctNum}
+                </p>
+                <p className="text-[13px] font-semibold">
+                  Routine Number: 233293939
                 </p>
               </div>
             </div>

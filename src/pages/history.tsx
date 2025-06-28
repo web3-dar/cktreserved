@@ -11,57 +11,6 @@ interface Transaction {
   icon: string;
 }
 
-const generateTransactions = (total: number): Transaction[] => {
-  const transactions: Transaction[] = [];
-  let remainingCredit = total;
-  const creditLabels = ["Payment Received", "Bank Transfer", "Cash In"];
-  const debitLabels = ["Tax", "Service Fee", "Maintenance", "VAT"];
-
-  const creditCount = Math.floor(Math.random() * 2) + 4; // 4–5 credits
-
-  // Generate credits
-  for (let i = 0; i < creditCount - 1; i++) {
-    const amt = parseFloat((Math.random() * (remainingCredit / 2) + 20).toFixed(2));
-    remainingCredit -= amt;
-    transactions.push({
-      type: "Credit",
-      amount: amt,
-      label: creditLabels[i % creditLabels.length],
-      icon: "💰",
-      date: new Date(Date.now() - Math.random() * 5 * 86400000)
-        .toISOString()
-        .slice(0, 19)
-        .replace("T", " "),
-    });
-  }
-  transactions.push({
-    type: "Credit",
-    amount: parseFloat(remainingCredit.toFixed(2)),
-    label: "Final Deposit",
-    icon: "💸",
-    date: new Date().toISOString().slice(0, 19).replace("T", " "),
-  });
-
-  // Generate 2–3 random debits
-  const debitCount = Math.floor(Math.random() * 2) + 2;
-  for (let i = 0; i < debitCount; i++) {
-    const amt = parseFloat((Math.random() * 30 + 10).toFixed(2));
-    transactions.push({
-      type: "Debit",
-      amount: amt,
-      label: debitLabels[i % debitLabels.length],
-      icon: "🧾",
-      date: new Date(Date.now() - Math.random() * 3 * 86400000)
-        .toISOString()
-        .slice(0, 19)
-        .replace("T", " "),
-    });
-  }
-
-  // Sort by newest date
-  return transactions.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-};
-
 const TransactionHistory: React.FC = () => {
   const [userAmount, setUserAmount] = useState<number>(0);
   const [allTransactions, setAllTransactions] = useState<Transaction[]>([]);
@@ -74,12 +23,45 @@ const TransactionHistory: React.FC = () => {
     const storedUser = localStorage.getItem("loggedInUser");
     if (storedUser) {
       const user = JSON.parse(storedUser);
-      const amount = user.amount || 0;
-      setUserAmount(amount);
+      setUserAmount(user.amount || 0);
       setUserName(user.firstName || "");
       setLastName(user.lastName || "");
       setAcctNumber(user.accountNumber || "");
-      setAllTransactions(generateTransactions(amount));
+
+      // Static sample transactions (no random generation)
+      setAllTransactions([
+       
+        {
+          type: "Debit",
+          amount: 45.0,
+          label: "Service Fee",
+          icon: "🧾",
+          date: "2025-06-27 08:15:00",
+        }, 
+        {
+          type: "Debit",
+          amount: 30.0,
+          label: "Tax",
+          icon: "🧾",
+          date: "2025-06-25 10:00:00",
+        },
+        
+        {
+          type: "Debit",
+          amount: 100.0,
+          label: "Maintenance",
+          icon: "🧾",
+          date: "2025-06-25 10:00:00",
+        },
+       
+        {
+          type: "Credit",
+          amount: 1000000,
+          label: "Company Name ",
+          icon: "💸",
+          date: "2025-06-25 10:00:00",
+        },
+      ]);
     }
   }, []);
 
@@ -115,30 +97,28 @@ const TransactionHistory: React.FC = () => {
           </div>
         </div>
 
-        {/* Only Debit Transactions */}
+        {/* All Transactions (Credit & Debit) */}
         <div className="space-y-4">
-          {allTransactions
-            .filter((transaction) => transaction.type === "Debit")
-            .map((transaction, index) => (
-              <div
-                key={index}
-                onClick={() => setSelectedTransaction(transaction)}
-                className="cursor-pointer bg-white p-4 rounded-xl shadow-md hover:bg-gray-50 transition-all flex justify-between items-center"
-              >
-                <div className="flex gap-3 items-start">
-                  <span className="text-xl">{transaction.icon}</span>
-                  <div>
-                    <p className="font-semibold text-red-600">
-                      {transaction.label}
-                    </p>
-                    <p className="text-xs text-gray-400">{transaction.date}</p>
-                  </div>
+          {allTransactions.map((transaction, index) => (
+            <div
+              key={index}
+              onClick={() => setSelectedTransaction(transaction)}
+              className="cursor-pointer bg-white p-4 rounded-xl shadow-md hover:bg-gray-50 transition-all flex justify-between items-center"
+            >
+              <div className="flex gap-3 items-start">
+                <span className="text-xl">{transaction.icon}</span>
+                <div>
+                  <p className={`font-semibold ${transaction.type === "Credit" ? "text-green-600" : "text-red-600"}`}>
+                    {transaction.label}
+                  </p>
+                  <p className="text-xs text-gray-400">{transaction.date}</p>
                 </div>
-                <p className="font-bold text-lg text-red-600">
-                  -${transaction.amount.toFixed(2)}
-                </p>
               </div>
-            ))}
+              <p className={`font-bold text-lg ${transaction.type === "Credit" ? "text-green-600" : "text-red-600"}`}>
+                {transaction.type === "Credit" ? "+" : "-"}${transaction.amount.toFixed(2)}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -200,7 +180,7 @@ const TransactionHistory: React.FC = () => {
       )}
 
       <BottomNav />
-      <BottomNav2/>
+      <BottomNav2 />
     </>
   );
 };

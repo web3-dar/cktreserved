@@ -8,6 +8,8 @@ import Header from '../Home/header';
 // import HeroSection from '../Home/hero';
 import HelpSection from '../Home/hero2';
 import hero from '../assets/hero.jpg';
+import Promotions from '../components/promotions';
+import RatesSection from '../components/ratesection';
 
 // import logo from '../assets/logo.png';
 // import bgImage from '../assets/homeBG.jpg'; 
@@ -37,9 +39,8 @@ const Home: React.FC = () => {
   <img src={hero} alt="Hero" className="max-w-full h-auto" />
 </div>
 
-    {/* <CustomerCommunications/>
-    <Blog/>
-    <BlogSection/> */}
+    <Promotions/>
+    <RatesSection/>
     <Footer/>
     
     </>

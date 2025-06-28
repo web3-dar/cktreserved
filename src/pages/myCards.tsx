@@ -38,13 +38,13 @@ const MyCards = () => {
         {/* Toggle Tabs */}
         <div className="w-full max-w-4xl flex mb-6 p-1">
           <button className="flex-1 px-4 py-2 bg-white shadow-md font-medium text-black">
-            Credit Card
+            Debit Card
           </button>
           <button
             className="flex-1 px-4 py-2 bg-gray-300 shadow-md text-gray-400 font-medium"
             disabled
           >
-            Debit Card (disabled)
+            Credit Card (disabled)
           </button>
         </div>
 
@@ -64,11 +64,11 @@ const MyCards = () => {
           <div className="flex justify-between mt-2">
             <div>
               <p className="font-medium text-sm text-gray-400">EXPIRY</p>
-              <p className="text-sm font-bold">{showCardDetails ? '12/26' : 'XX/XX'}</p>
+              <p className="text-sm font-bold">{showCardDetails ? '12/28' : 'XX/XX'}</p>
             </div>
             <div>
               <p className="font-medium text-sm text-gray-400">CCV</p>
-              <p className="text-sm font-bold">{showCardDetails ? '123' : 'XXX'}</p>
+              <p className="text-sm font-bold">{showCardDetails ? '607' : 'XXX'}</p>
             </div>
           </div>
         </div>
@@ -95,8 +95,8 @@ const MyCards = () => {
           {[
             { label: 'Name On Card', value: user?.name || 'N/A' },
             { label: 'Card Number', value: showCardDetails ? '4321-5678-9876-4900' : 'XXXX-XXX-XXXX-4900' },
-            { label: 'Expiry Date', value: showCardDetails ? '12/26' : 'XX/XX' },
-            { label: 'CVC', value: showCardDetails ? '123' : 'XXX' },
+            { label: 'Expiry Date', value: showCardDetails ? '12/28' : 'XX/XX' },
+            { label: 'CVC', value: showCardDetails ? '607' : 'XXX' },
           ].map((detail, index) => (
             <div
               key={index}

@@ -44,17 +44,8 @@ const ZellePage = () => {
         <button>RECIPIENTS</button>
       </div>
 
-      {/* Pay again section */}
-      <div className="pt-4">
-        <h3 className="text-sm font-semibold text-gray-600">Pay again</h3>
-        <div className="flex items-center space-x-3 mt-2">
-          <div className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center text-sm text-white">LS</div>
-          <div>
-            <p className="text-sm font-medium">L. Smith</p>
-            <p className="text-xs text-gray-400">••••@gmail.com</p>
-          </div>
-        </div>
-      </div>
+      
+      
     </div>
     <BottomNav/>
     <BottomNav2/>
