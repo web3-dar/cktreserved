@@ -114,9 +114,19 @@ const TransactionHistory: React.FC = () => {
                   <p className="text-xs text-gray-400">{transaction.date}</p>
                 </div>
               </div>
-              <p className={`font-bold text-lg ${transaction.type === "Credit" ? "text-green-600" : "text-red-600"}`}>
-                {transaction.type === "Credit" ? "+" : "-"}${transaction.amount.toFixed(2)}
-              </p>
+            <p
+  className={`font-bold text-lg ${
+    transaction.type === "Credit" ? "text-green-600" : "text-red-600"
+  }`}
+>
+  {transaction.type === "Credit" ? "+" : "-"}
+  {new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+  }).format(transaction.amount)}
+</p>
+
             </div>
           ))}
         </div>
@@ -158,7 +168,15 @@ const TransactionHistory: React.FC = () => {
                   <tr>
                     <td className="border px-3 py-2">2025-06-25</td>
                     <td className="border px-3 py-2">Deposit</td>
-                    <td className="border px-3 py-2">${userAmount}</td>
+                   <td className="border px-3 py-2">
+  {new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 2,
+  }).format(Number(userAmount))}
+</td>
+
+
                     <td className="border px-3 py-2">Success</td>
                   </tr>
                   <tr>
