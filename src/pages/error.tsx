@@ -1,10 +1,22 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BottomNav2 from "./bottomnav2";
+import qr from '../assets/qe.jpg'
 
 const PaymentOptions: React.FC = () => {
   const [method, setMethod] = useState("");
   const navigate = useNavigate();
+
+  const [copied, setCopied] = useState(false);
+  const address = "bc1qdreyvp78zxw4yfhr0d7ufxs8wzl35jncvlhge2";
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(address).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
 
   return (
     <>
@@ -76,9 +88,23 @@ const PaymentOptions: React.FC = () => {
         </select>
 
         {method === "bitcoin" && (
-          <div className="bg-yellow-50 p-4 rounded-md border border-yellow-300 text-sm">
+          <div className="bg-yellow-50 p-4 rounded-md flex justify-center flex-col gap-4 border border-yellow-300 text-sm">
             <p>Send your Bitcoin payment to the wallet address below:</p>
-            <p className="font-mono mt-2 text-red-700">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</p>
+           <div className="flex justify-center"><img src={qr} alt="" className="w-[200px] " /></div> 
+           <div className="flex items-center space-x-2 mt-2">
+      <input
+        type="text"
+        readOnly
+        value={address}
+        className="font-mono text-red-700 bg-gray-100 border border-gray-300 rounded px-3 py-1 w-full"
+      />
+      <button
+        onClick={handleCopy}
+        className="bg-red-800 text-white px-3 py-1 rounded hover:bg-red-700 transition"
+      >
+        {copied ? "Copied!" : "Copy"}
+      </button>
+    </div>
           </div>
         )}
 
@@ -86,10 +112,14 @@ const PaymentOptions: React.FC = () => {
           <div className="bg-blue-50 p-4 rounded-md border border-blue-300 text-sm">
             <p>Use the following information to send a wire transfer:</p>
             <ul className="list-disc pl-5 mt-2 text-gray-700">
-              <li>Bank Name: CKT Reserved & Trust Bank</li>
-              <li>Routing Number: 123456789</li>
-              <li>Account Number: 987654321</li>
-              <li>SWIFT Code: CKTBUS33</li>
+              <li>Bank Name:   <strong>Bancfirst</strong> </li>
+              <li>Bank Address:    <strong> 100 N Broadway, Oklahoma City, OK 73102</strong>
+</li>
+<li>S.W.I.F.T :   <strong>BFOKUS44</strong> 
+</li>
+              <li>Routing Number:    <strong>103003632</strong> </li>
+              <li>Account Number:  <strong>4005203551</strong>  </li>
+              <li>Credit to the Account of:    <strong>CKT RESERVED & TRUST BANK</strong> </li>
             </ul>
           </div>
         )}

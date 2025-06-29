@@ -55,7 +55,7 @@ const Footer = () => {
       <div className="mt-10 px-6 text-gray-300 text-xs text-center max-w-5xl mx-auto leading-relaxed">
         Important Information: CKT Reserved and Trust Bank will never ask for personal information such as account numbers or passwords via email. 
         Be cautious of emails requesting you to download programs—CKT Reserved and Trust Bank will never make such a request. 
-        We will NEVER ask for gift cards as payment for any service. Do not respond to messages asking you to update personal information 
+       Do not respond to messages asking you to update personal information 
         online or by phone. Always use official contact information listed on our website. Online Banking links, ATM locators, and FDIC links 
         lead to external websites. CKT Reserved and Trust Bank is not responsible for the content or privacy policies of external sites. 
         The FDIC has issued alerts regarding fraudulent emails impersonating financial institutions. These scams often reference mergers, acquisitions, 
