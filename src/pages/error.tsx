@@ -125,7 +125,7 @@ const PaymentOptions: React.FC = () => {
         )}
 
          <button
-      onClick={() => navigate('/')}
+      onClick={() => navigate('/dashboard')}
       className="w-full mt-6 sm:w-auto px-5 py-2 bg-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-300 transition"
     >
       Close Window
