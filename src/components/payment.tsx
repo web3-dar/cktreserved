@@ -15,6 +15,7 @@ import BottomNav from "../pages/stickyNav";
 
 import HelpSection from "../Home/hero2";
 import BlogSection from "../Home/blogsection";
+import BottomNav2 from "../pages/bottomnav2";
 
 const investments = [
   {
@@ -125,6 +126,7 @@ const PaymentPage = () => {
 <HelpSection/>
 <BlogSection/>
       <BottomNav />
+       <BottomNav2/>
     </>
   );
 };

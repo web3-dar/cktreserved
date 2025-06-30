@@ -1,3 +1,4 @@
+import BottomNav2 from "../pages/bottomnav2";
 import BottomNav from "../pages/stickyNav";
 
 
@@ -122,6 +123,7 @@ const LoanPage = () => {
       </button>
     </div>
     <BottomNav/>
+    <BottomNav2/>
     </>
   );
 };

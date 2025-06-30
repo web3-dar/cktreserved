@@ -3,6 +3,7 @@
 // import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import BottomNav from "../pages/stickyNav";
+import BottomNav2 from "../pages/bottomnav2";
 
 const formatDate = (date: Date) => {
     const options: Intl.DateTimeFormatOptions = { month: "short", day: "numeric", year: "numeric" };
@@ -124,6 +125,7 @@ const [userAmount, setUserAmount] = useState<number>(0);
     </div>
    
    <BottomNav/>
+   <BottomNav2/>
     
     </>
   );
