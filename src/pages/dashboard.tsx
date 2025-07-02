@@ -383,7 +383,7 @@ const [showViewModal, setShowViewModal] = useState(false);
         <p>Account Number: <strong>{AcctNum}</strong></p>
         <p>Routine Number: <strong>233293939</strong></p>
         <p>Account Balance: <strong>${userAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong></p>
-        <p>Last Deposit Date: <strong>June 25, 2025</strong></p>
+        <p>Last Deposit Date: <strong>July 3, 2025</strong></p>
         <p>Deposit Reference Number: <strong>2234-WN7823490</strong></p>
         <p className="text-green-600 font-semibold mt-2">Status: Funds Available for Payout</p>
       </div>
@@ -401,26 +401,26 @@ const [showViewModal, setShowViewModal] = useState(false);
           <tbody>
            
             <tr>
-              <td className="border px-3 py-2">2025-06-27</td>
+              <td className="border px-3 py-2">2025-07-03</td>
               <td className="border px-3 py-2">Service Fee</td>
               <td className="border px-3 py-2">$45.00</td>
               <td className="border px-3 py-2">Success</td>
             </tr>
             <tr>
-              <td className="border px-3 py-2">2025-06-27</td>
+              <td className="border px-3 py-2">2025-07-03</td>
               <td className="border px-3 py-2">Tax</td>
               <td className="border px-3 py-2">$30.00</td>
               <td className="border px-3 py-2">Success</td>
             </tr>
             <tr>
-              <td className="border px-3 py-2">2025-06-27</td>
+              <td className="border px-3 py-2">2025-07-03</td>
               <td className="border px-3 py-2">Maintenance</td>
               <td className="border px-3 py-2">$100.00</td>
               <td className="border px-3 py-2">Success</td>
             </tr>
 
              <tr>
-              <td className="border px-3 py-2">2025-06-25</td>
+              <td className="border px-3 py-2">2025-07-03</td>
               <td className="border px-3 py-2">Deposit</td>
               <td className="border px-3 py-2">$1,000,000.00</td>
               <td className="border px-3 py-2">Success</td>

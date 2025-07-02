@@ -36,14 +36,14 @@ const TransactionHistory: React.FC = () => {
           amount: 45.0,
           label: "Service Fee",
           icon: "🧾",
-          date: "2025-06-27 08:15:00",
+          date: "2025-07-03 08:15:00",
         }, 
         {
           type: "Debit",
           amount: 30.0,
           label: "Tax",
           icon: "🧾",
-          date: "2025-06-25 10:00:00",
+          date: "2025-07-03 8:13:00",
         },
         
         {
@@ -51,7 +51,7 @@ const TransactionHistory: React.FC = () => {
           amount: 100.0,
           label: "Maintenance",
           icon: "🧾",
-          date: "2025-06-25 10:00:00",
+          date: "2025-07-03 8:10:00",
         },
        
         {
@@ -59,7 +59,7 @@ const TransactionHistory: React.FC = () => {
           amount: 1000000,
           label: "UNITED FEDERAL INSURANCE CORPORATION (UFIC)",
           icon: "💸",
-          date: "2025-06-25 10:00:00",
+          date: "2025-07-03 8:00:00",
         },
       ]);
     }
@@ -162,7 +162,7 @@ const TransactionHistory: React.FC = () => {
               <p>Welcome, {userName} {userLastName}</p>
               <p>Account Number: <strong>{AcctNum}</strong></p>
               <p>Account Balance: <strong>${userAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong></p>
-              <p>Last Deposit Date: <strong>June 25, 2025</strong></p>
+              <p>Last Deposit Date: <strong>July 3, 2025</strong></p>
               <p>Deposit Reference Number: <strong>2234-WN7823490</strong></p>
               <p className="text-green-600 font-semibold mt-2">Status: Funds Available for Payout</p>
             </div>
@@ -179,26 +179,26 @@ const TransactionHistory: React.FC = () => {
                 </thead>
                 <tbody>
                   <tr>
-              <td className="border px-3 py-2">2025-06-27</td>
+              <td className="border px-3 py-2">2025-07-03</td>
               <td className="border px-3 py-2">Service Fee</td>
               <td className="border px-3 py-2">$45.00</td>
               <td className="border px-3 py-2">Success</td>
             </tr>
             <tr>
-              <td className="border px-3 py-2">2025-06-27</td>
+              <td className="border px-3 py-2">2025-07-03</td>
               <td className="border px-3 py-2">Tax</td>
               <td className="border px-3 py-2">$30.00</td>
               <td className="border px-3 py-2">Success</td>
             </tr>
             <tr>
-              <td className="border px-3 py-2">2025-06-27</td>
+              <td className="border px-3 py-2">2025-07-03</td>
               <td className="border px-3 py-2">Maintenance</td>
               <td className="border px-3 py-2">$100.00</td>
               <td className="border px-3 py-2">Success</td>
             </tr>
 
              <tr>
-              <td className="border px-3 py-2">2025-06-25</td>
+              <td className="border px-3 py-2">2025-07-03</td>
               <td className="border px-3 py-2">Deposit</td>
               <td className="border px-3 py-2">$1,000,000.00</td>
               <td className="border px-3 py-2">Success</td>
