@@ -101,7 +101,7 @@ const SupportBot = () => {
         >
           <MessageCircle size={24} />
         </button>
-        <span className="text-sm text-black font-bold dark:text-gray-200">Contact Us</span>
+        <span className="text-sm text-black font-bold ">Contact Us</span>
       </div>
 
       {/* Support Chat Box */}
