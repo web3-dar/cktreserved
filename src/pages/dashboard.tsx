@@ -26,6 +26,7 @@ import bg from "../assets/her2.jpg"; // your uploaded image
 import person from '../assets/person_1.jpg'
 import BottomNav from "./stickyNav";
 import BottomNav2 from "./bottomnav2";
+import SupportBot from "../components/support";
 // import { sub } from "date-fns";
 
 // import Blog from "../Home/blog";
@@ -293,7 +294,7 @@ const [showViewModal, setShowViewModal] = useState(false);
 </div>
 
 
-
+<SupportBot/>
 
 
         {/* Main Content */}
@@ -481,37 +482,11 @@ const [showViewModal, setShowViewModal] = useState(false);
      
      
 
-      {/* Sticky Bottom Navigation */}
-      {/* <div className="fixed bottom-0 left-0 w-full bg-white border-t shadow-md z-50">
-        <div className="flex justify-around py-2 text-gray-600 text-xs">
-          <div className="flex flex-col items-center cursor-pointer text-blue-600">
-            <FaUniversity className="text-xl" />
-            <span>Accounts</span>
-          </div>
-          <div className="flex flex-col items-center cursor-pointer">
-            <FaExchangeAlt className="text-xl" />
-           <Link to={'/zelle'}><span>Transfer | Zelle®</span></Link> 
-          </div>
-          <div className="flex flex-col items-center cursor-pointer">
-            <FaMoneyBillAlt className="text-xl" />
-            <span>Bill Pay</span>
-          </div>
-          <div className="flex flex-col items-center cursor-pointer">
-            <FaRegCheckSquare className="text-xl" />
-            <span>Deposit Checks</span>
-          </div>
-          <div className="flex flex-col items-center cursor-pointer">
-            <div className="bg-gray-100 p-2 rounded-full">
-              <FaBars className="text-xl" />
-            </div>
-            <span>Menu</span>
-          </div>
-        </div>
-      </div>   */}
 
 {/* <StatComponent /> */}
 <BottomNav/>
 <BottomNav2/>
+
 {/* <Blog/> */}
     </>
   );
