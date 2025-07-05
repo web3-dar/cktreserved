@@ -1,30 +1,35 @@
 import { useEffect, useState } from "react";
-import { MessageCircle } from "lucide-react"; // Optional: or use any icon
+import { MessageCircle } from "lucide-react";
+import sound from "../assets/mixkit-correct-answer-tone-2870.wav"; // Make sure this file exists
 
 const SupportBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [userName, setUserName] = useState<string>("");
-//   const [userLastName, setLastName] = useState<string>("");
-
-
-
-   useEffect(() => {
-      const storedUser = localStorage.getItem("loggedInUser");
-      if (storedUser) {
-        const user = JSON.parse(storedUser);
-      
-        setUserName(user.firstName || "");
-        // setLastName(user.lastName || "");
-       
-      }
-    }, []);
-
-
-
-  const [messages, setMessages] = useState([
-    { sender: "bot", text: ` Hello! ${userName} How can I help you today?` },
-  ]);
+  const [messages, setMessages] = useState<{ sender: string; text: string }[]>([]);
   const [input, setInput] = useState("");
+
+  // Fetch user info and greet
+  useEffect(() => {
+    const storedUser = localStorage.getItem("loggedInUser");
+    if (storedUser) {
+      const user = JSON.parse(storedUser);
+      console.log(userName)
+      setUserName(user.firstName || "");
+      setMessages([
+        {
+          sender: "bot",
+          text: `Hello! ${user.firstName || ""}, how can I help you today?`,
+        },
+      ]);
+    } else {
+      setMessages([
+        {
+          sender: "bot",
+          text: `Hello! How can I help you today?`,
+        },
+      ]);
+    }
+  }, []);
 
   const handleSend = () => {
     if (!input.trim()) return;
@@ -35,74 +40,78 @@ const SupportBot = () => {
     setTimeout(() => {
       const botReply = getBotReply(input);
       setMessages((prev) => [...prev, { sender: "bot", text: botReply }]);
+
+      try {
+        const botSound = new Audio(sound as string); // ensure it's treated as string
+        botSound.loop = false;
+        botSound.play();
+      } catch (err) {
+        console.error("Failed to play sound:", err);
+      }
     }, 500);
 
     setInput("");
   };
 
-const getBotReply = (question: string) => {
-  const lower = question.toLowerCase();
+  const getBotReply = (question: string) => {
+    const lower = question.toLowerCase();
 
-  if (lower.includes("transfer")) {
-    return `🚫 Transfer Access Restricted – Tier-2 Compliance Required.
+    if (lower.includes("transfer")) {
+      return `🚫 Transfer Access Restricted – Tier-2 Compliance Required.\n\nOutbound transfers from this account are currently unavailable.\n\nPer U.S. Reserve Compliance Policy and digital asset routing standards, your account must fulfill all Tier-2 clearance requirements prior to engaging in any financial transactions. For help, contact support at contact@cktreservedtrustbank.com.`;
+    }
 
-Outbound transfers from this account are currently unavailable.
+    if (lower.includes("loan")) {
+      return "You can apply for a loan via your dashboard. Visit the 'Loans' section for available offers.";
+    }
 
-Per U.S. Reserve Compliance Policy and digital asset routing standards, your account must fulfill all Tier-2 clearance requirements prior to engaging in any financial transactions. For help, contact support at contact@cktreservedtrustbank.com.`  }
+    if (lower.includes("account")) {
+      return "For account updates or changes, please log in to your profile or contact our support team.";
+    }
 
-  if (lower.includes("loan")) {
-    return "You can apply for a loan via your dashboard. Visit the 'Loans' section for available offers.";
-  }
+    if (lower.includes("card")) {
+      return "To request or block a card, go to the 'Cards' tab in your dashboard.";
+    }
 
-  if (lower.includes("account")) {
-    return "For account updates or changes, please log in to your profile or contact our support team.";
-  }
+    if (lower.includes("fraud") || lower.includes("unauthorized")) {
+      return "Please report any suspicious activity immediately to contact@cktreservedtrustbank.com.";
+    }
 
-  if (lower.includes("card")) {
-    return "To request or block a card, go to the 'Cards' tab in your dashboard.";
-  }
+    if (lower.includes("contact") || lower.includes("support")) {
+      return "You can reach us anytime at contact@cktreservedtrustbank.com.";
+    }
 
-  if (lower.includes("fraud") || lower.includes("unauthorized")) {
-    return "Please report any suspicious activity immediately to contact@cktreservedtrustbank.com.";
-  }
+    if (lower.includes("open account")) {
+      return "To open a new account, visit https://cktreservedtrustbank.com and click 'Open Account'.";
+    }
 
-  if (lower.includes("contact") || lower.includes("support")) {
-    return "You can reach us anytime at contact@cktreservedtrustbank.com.";
-  }
+    if (lower.includes("balance")) {
+      return "To check your balance, log in to your online banking dashboard.";
+    }
 
-  if (lower.includes("open account")) {
-    return "To open a new account, visit https://cktreservedtrustbank.com and click 'Open Account'.";
-  }
-
-  if (lower.includes("balance")) {
-    return "To check your balance, log in to your online banking dashboard.";
-  }
-
-  return "I'm not sure about that. Please contact us at contact@cktreservedtrustbank.com or visit https://cktreservedtrustbank.com.";
-};
-
-
+    return "I'm not sure about that. Please contact us at contact@cktreservedtrustbank.com or visit https://cktreservedtrustbank.com.";
+  };
 
   return (
     <>
-      {/* Sticky chat button */}
-     <div className="fixed bottom-[100px] right-5 z-50 flex flex-col items-center space-y-1">
-  <button
-    className="bg-red-800 hover:bg-red-700 text-white p-3 rounded-full shadow-lg"
-    onClick={() => setIsOpen(!isOpen)}
-  >
-    <MessageCircle size={24} />
-  </button>
-  <span className="text-sm text-gray-700 dark:text-gray-200">Contact Us</span>
-</div>
-
+      {/* Sticky Chat Button */}
+      <div className="fixed bottom-[100px] right-5 z-50 flex flex-col items-center space-y-1">
+        <button
+          className="bg-red-800 hover:bg-red-700 text-white p-3 rounded-full shadow-lg"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <MessageCircle size={24} />
+        </button>
+        <span className="text-sm text-black font-bold dark:text-gray-200">Contact Us</span>
+      </div>
 
       {/* Support Chat Box */}
       {isOpen && (
         <div className="fixed bottom-20 right-5 max-w-md w-full border rounded-2xl shadow-lg flex flex-col h-[500px] bg-white z-50">
           <div className="bg-black text-white py-3 px-5 rounded-t-2xl font-bold flex justify-between items-center">
             <span>Support Bot</span>
-            <button onClick={() => setIsOpen(false)} className="text-white text-sm">X</button>
+            <button onClick={() => setIsOpen(false)} className="text-white text-sm">
+              X
+            </button>
           </div>
 
           <div className="flex-1 overflow-y-auto p-4 space-y-2 bg-gray-100">
