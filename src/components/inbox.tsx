@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { MailWarning, ShieldAlert, CreditCard, Info, CheckCircle } from "lucide-react";
 import BottomNav from "../pages/stickyNav";
 import BottomNav2 from "../pages/bottomnav2";
