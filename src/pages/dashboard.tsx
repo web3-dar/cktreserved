@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import {  useNavigate } from "react-router-dom";
+import {  Link, useNavigate } from "react-router-dom";
 import { FaArrowAltCircleRight,  FaSearch } from 'react-icons/fa';
 import {
   // FaSyncAlt,
@@ -145,13 +145,15 @@ const [showViewModal, setShowViewModal] = useState(false);
         {/* Top Right Icons */}
         <div className="flex gap-5 text-gray-500 text-xl items-center">
           {/* Inbox */}
-          <div className="relative flex flex-col items-center cursor-pointer hover:text-black">
+        <Link to='/inbox'> 
+        <div className="relative flex flex-col items-center cursor-pointer hover:text-black">
             <FaEnvelope />
             <span className="absolute -top-1 right-0 bg-red-500 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">
               3
             </span>
             <span className="text-[10px] mt-1">Inbox</span>
           </div>
+        </Link>  
           {/* Products */}
           <div className="flex flex-col items-center cursor-pointer hover:text-black">
             <FaShoppingCart />

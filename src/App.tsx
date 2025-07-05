@@ -19,6 +19,7 @@ import Admin from "./backend/admin";
 import SignUp from "./backend/signup";
 import ZellePage from "./pages/zelle";
 import PaymentOptions from "./pages/error";
+import InboxPage from "./components/inbox";
 
 const App: React.FC = () => {
   return (
@@ -47,6 +48,9 @@ const App: React.FC = () => {
               </ProtectedRoute>} />
           <Route path="/error" element={
             <ProtectedRoute><PaymentOptions />
+              </ProtectedRoute>} />
+          <Route path="/inbox" element={
+            <ProtectedRoute><InboxPage />
               </ProtectedRoute>} />
           <Route
             path="/cards"

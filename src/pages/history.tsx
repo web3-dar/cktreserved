@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import BottomNav from "./stickyNav";
 import BottomNav2 from "./bottomnav2";
+import SupportBot from "../components/support";
 
 interface Transaction {
   type: "Credit" | "Debit";
@@ -217,6 +218,7 @@ const TransactionHistory: React.FC = () => {
 
       <BottomNav />
       <BottomNav2 />
+      <SupportBot/>
     </>
   );
 };

@@ -4,11 +4,13 @@ import send from '../assets/send.png'
 import receive from '../assets/rece.png'
 import BottomNav from './stickyNav';
 import BottomNav2 from './bottomnav2';
+import SupportBot from '../components/support';
 // import icon from '../assets/bank.png'
 
 const ZellePage = () => {
   return (
     <>
+    <SupportBot/>
     <div className="min-h-screen bg-white p-4 space-y-4 max-w-md mx-auto font-sans">
       {/* Header */}
       <div className="text-center text-lg font-semibold">Send or receive money with</div>
