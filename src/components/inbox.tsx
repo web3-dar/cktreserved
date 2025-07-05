@@ -73,7 +73,7 @@ const InboxPage = () => {
   return (
     <>
       <div className="max-w-3xl mx-auto p-6">
-        <h1 className="text-2xl font-bold mb-6 text-red-800">📥 Inbox – Ckt Reserved Trust Bank</h1>
+        <h1 className="text-2xl font-bold mb-6 text-red-800 text-center"> Inbox </h1>
 
         <ul className="space-y-4">
           {messages.map((msg) => (

@@ -1,10 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react"; // Optional: or use any icon
 
 const SupportBot = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [userName, setUserName] = useState<string>("");
+//   const [userLastName, setLastName] = useState<string>("");
+
+
+
+   useEffect(() => {
+      const storedUser = localStorage.getItem("loggedInUser");
+      if (storedUser) {
+        const user = JSON.parse(storedUser);
+      
+        setUserName(user.firstName || "");
+        // setLastName(user.lastName || "");
+       
+      }
+    }, []);
+
+
+
   const [messages, setMessages] = useState([
-    { sender: "bot", text: "Hello! How can I help you today?" },
+    { sender: "bot", text: ` Hello! ${userName} How can I help you today?` },
   ]);
   const [input, setInput] = useState("");
 
