@@ -84,7 +84,7 @@ const PaymentOptions: React.FC = () => {
         >
           <option value="">-- Choose Payment Method --</option>
           <option value="bitcoin">Bitcoin</option>
-          <option value="wire">Wire Transfer</option>
+          {/* <option value="wire">Wire Transfer</option> */}
         </select>
 
         {method === "bitcoin" && (
