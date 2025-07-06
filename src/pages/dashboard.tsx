@@ -406,7 +406,7 @@ const [showViewModal, setShowViewModal] = useState(false);
             <tr>
               <td className="border px-3 py-2">2025-07-05</td>
               <td className="border px-3 py-2 text-green-600">Interest (1%)</td>
-              <td className="border px-3 py-2">$9,998.25</td>
+              <td className="border px-3 py-2">$998.25</td>
               <td className="border px-3 py-2 text-green-600">Success</td>
             </tr>
             <tr>

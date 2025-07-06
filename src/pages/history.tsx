@@ -34,7 +34,7 @@ const TransactionHistory: React.FC = () => {
        
         {
           type: "Credit",
-          amount: 9998.25,
+          amount: 998.25,
           label: "Interest (1%)",
           icon: "🧾",
           date: "2025-07-05 08:15:00",
