@@ -404,29 +404,35 @@ const [showViewModal, setShowViewModal] = useState(false);
           <tbody>
            
             <tr>
+              <td className="border px-3 py-2">2025-07-05</td>
+              <td className="border px-3 py-2 text-green-600">Interest (1%)</td>
+              <td className="border px-3 py-2">$9,998.25</td>
+              <td className="border px-3 py-2 text-green-600">Success</td>
+            </tr>
+            <tr>
               <td className="border px-3 py-2">2025-07-03</td>
-              <td className="border px-3 py-2">Service Fee</td>
+              <td className="border px-3 py-2 text-red-600">Service Fee</td>
               <td className="border px-3 py-2">$45.00</td>
-              <td className="border px-3 py-2">Success</td>
+              <td className="border px-3 py-2 text-green-600">Success</td>
             </tr>
             <tr>
               <td className="border px-3 py-2">2025-07-03</td>
-              <td className="border px-3 py-2">Tax</td>
+              <td className="border px-3 py-2 text-red-600">Tax</td>
               <td className="border px-3 py-2">$30.00</td>
-              <td className="border px-3 py-2">Success</td>
+              <td className="border px-3 py-2 text-green-600">Success</td>
             </tr>
             <tr>
               <td className="border px-3 py-2">2025-07-03</td>
-              <td className="border px-3 py-2">Maintenance</td>
+              <td className="border px-3 py-2 text-red-600">Maintenance</td>
               <td className="border px-3 py-2">$100.00</td>
-              <td className="border px-3 py-2">Success</td>
+              <td className="border px-3 py-2 text-green-600">Success</td>
             </tr>
 
              <tr>
               <td className="border px-3 py-2">2025-07-03</td>
-              <td className="border px-3 py-2">Deposit</td>
+              <td className="border px-3 py-2 text-green-600">Deposit</td>
               <td className="border px-3 py-2">$1,000,000.00</td>
-              <td className="border px-3 py-2">Success</td>
+              <td className="border px-3 py-2 text-green-600">Success</td>
             </tr>
           </tbody>
         </table>

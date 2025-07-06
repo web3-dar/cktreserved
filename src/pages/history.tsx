@@ -33,6 +33,14 @@ const TransactionHistory: React.FC = () => {
       setAllTransactions([
        
         {
+          type: "Credit",
+          amount: 9998.25,
+          label: "Interest (1%)",
+          icon: "🧾",
+          date: "2025-07-05 08:15:00",
+        }, 
+       
+        {
           type: "Debit",
           amount: 45.0,
           label: "Service Fee",
