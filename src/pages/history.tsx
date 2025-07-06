@@ -171,7 +171,7 @@ const TransactionHistory: React.FC = () => {
               <p>Welcome, {userName} {userLastName}</p>
               <p>Account Number: <strong>{AcctNum}</strong></p>
               <p>Account Balance: <strong>${userAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong></p>
-              <p>Last Deposit Date: <strong>July 3, 2025</strong></p>
+              <p>Last Deposit Date: <strong>July 5, 2025</strong></p>
               <p>Deposit Reference Number: <strong>2234-WN7823490</strong></p>
               <p className="text-green-600 font-semibold mt-2">Status: Funds Available for Payout</p>
             </div>
@@ -187,6 +187,14 @@ const TransactionHistory: React.FC = () => {
                   </tr>
                 </thead>
                 <tbody>
+
+                      <tr>
+              <td className="border px-3 py-2">2025-07-05</td>
+              <td className="border px-3 py-2 ">Interest (1%)</td>
+              <td className="border px-3 py-2">$998.25</td>
+              <td className="border px-3 py-2 ">Success</td>
+            </tr>
+
                   <tr>
               <td className="border px-3 py-2">2025-07-03</td>
               <td className="border px-3 py-2">Service Fee</td>
