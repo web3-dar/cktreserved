@@ -23,6 +23,7 @@ const [userAmount, setUserAmount] = useState<number>(0);
       if (storedUser) {
         const user = JSON.parse(storedUser);
         setUserAmount(user.amount || 0);
+        console.log(userAmount)
         // setUserImage(user.profilePicture || "default-avatar.jpg");
         setUserName(user.firstName || "User");
       }
@@ -48,7 +49,7 @@ const [userAmount, setUserAmount] = useState<number>(0);
                 <span className="material-icons text-blue-500">check_circle</span>
               </div>
               <div className="ml-4">
-                <p className="text-xl font-semibold">${userAmount}.00</p>
+                <p className="text-xl font-semibold">$998.00</p>
                 <p className="text-sm text-gray-500">Jan 1 2020 - {currentDate}</p>
               </div>
             </div>
@@ -63,12 +64,12 @@ const [userAmount, setUserAmount] = useState<number>(0);
                 <span className="material-icons text-red-500">pie_chart</span>
               </div>
               <div className="ml-4">
-              <p className="text-xl font-semibold">${userAmount * 2}.00</p>
+              <p className="text-xl font-semibold">$1,000,000.00</p>
 
-                <p className="text-sm text-gray-500">Jan 1 2025- {currentDate}</p>
+                <p className="text-sm text-gray-500">July 3 2025</p>
               </div>
             </div>
-            <button className="text-green-500 font-medium">Interest</button>
+            <button className="text-green-500 font-medium">Deposited</button>
           </div>
         </div>
       </div>
@@ -76,7 +77,7 @@ const [userAmount, setUserAmount] = useState<number>(0);
       {/* Savings Goals Section */}
       <div>
         <h2 className="text-lg font-semibold text-gray-700 mb-2">
-         {userName}'s Saving goals
+         {userName}'s Interest rate
         </h2>
         {/* Savings Goal Card */}
         <div className="bg-white shadow rounded-lg p-4 mb-6">
@@ -86,31 +87,16 @@ const [userAmount, setUserAmount] = useState<number>(0);
                 <span className="material-icons text-red-500">savings</span>
               </div>
               <div className="ml-4">
-              <p className="text-xl font-semibold">${userAmount * 0.01}.00</p>
+              <p className="text-xl font-semibold">$998.00</p>
 
                 <p className="text-sm text-gray-500">
-                    1% daily
+                    1% weekly
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div className="bg-white shadow rounded-lg p-4 mb-6">
-          <div className="flex justify-between items-center">
-            <div className="flex items-center">
-              <div className="h-10 w-10 rounded-full bg-red-100 flex items-center justify-center">
-                <span className="material-icons text-red-500">savings</span>
-              </div>
-              <div className="ml-4">
-              <p className="text-xl font-semibold">${userAmount * 0.1}.00</p>
-
-                <p className="text-sm text-gray-500">
-                   10% Weekly
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
 
       {/* Buttons */}
