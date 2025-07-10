@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import BottomNav from './stickyNav';
 import { FiSettings } from "react-icons/fi";
 import BottomNav2 from './bottomnav2';
+import lol from '../assets/logo.png'
 
 const SettingsPage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -41,10 +42,20 @@ const SettingsPage = () => {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-100">
-        <div className="w-16 h-16 border-4 border-purple-500 border-dotted rounded-full animate-spin"></div>
-        <p className="mt-4 text-xl font-semibold text-black">Processing...</p>
-      </div>
+     <div className="flex flex-col items-center justify-center min-h-screen z-10 ">
+  <div className="bg-white   p-6 w-80 flex flex-col items-center">
+    <img
+      src={lol} // replace with your actual image path
+      alt="Loading illustration"
+      className="w-'200px h-32 object-contain mb-4"
+    />
+    
+    <div className="flex items-center space-x-2">
+      <div className="w-4 h-4 border-2 border-red-500 border-dotted rounded-full animate-spin"></div>
+      {/* <p className="text-sm text-gray-600">Loading...</p> */}
+    </div>
+  </div>
+</div>
     );
   }
 
