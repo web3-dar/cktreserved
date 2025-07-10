@@ -13,7 +13,7 @@ const SupportBot = () => {
 
   useEffect(() => {
     // Set Chatra ID
-    window.ChatraID = "mbWC7AxrC8n5Hh5zK";
+    window.ChatraID = "ZzBSDsiThaoDyxpLc";
 
     // Load Chatra script
     if (!document.getElementById("chatra-script")) {
@@ -24,8 +24,16 @@ const SupportBot = () => {
 
       // Detect when Chatra is ready
       script.onload = () => {
-        setChatraReady(true);
-      };
+  const waitForChatra = () => {
+    if (window.Chatra) {
+      setChatraReady(true);
+    } else {
+      setTimeout(waitForChatra, 100); // Retry every 100ms
+    }
+  };
+  waitForChatra();
+};
+
 
       document.body.appendChild(script);
     } else {
