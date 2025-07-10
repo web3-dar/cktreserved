@@ -12,7 +12,7 @@ const SupportBot = () => {
   const [chatraReady, setChatraReady] = useState(false);
 
   useEffect(() => {
-    // Set Chatra ID
+   
     window.ChatraID = "ZzBSDsiThaoDyxpLc";
 
     // Load Chatra script
