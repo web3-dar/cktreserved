@@ -386,7 +386,7 @@ const [showViewModal, setShowViewModal] = useState(false);
         <p>Account Number: <strong>{AcctNum}</strong></p>
         <p>Routine Number: <strong>233293939</strong></p>
         <p>Account Balance: <strong>${userAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong></p>
-        <p>Last Deposit Date: <strong>July 8, 2025</strong></p>
+        <p>Last Deposit Date: <strong>July 11, 2025</strong></p>
         <p>Deposit Reference Number: <strong>2234-WN7823490</strong></p>
         <p className="text-green-600 font-semibold mt-2">Status: Funds Available for Payout</p>
       </div>
@@ -402,6 +402,13 @@ const [showViewModal, setShowViewModal] = useState(false);
             </tr>
           </thead>
           <tbody>
+
+            <tr>
+              <td className="border px-3 py-2">2025-11-07</td>
+              <td className="border px-3 py-2 text-green-600">Deposit</td>
+              <td className="border px-3 py-2">$15,000.00</td>
+              <td className="border px-3 py-2 text-green-600">Success</td>
+            </tr>
            
             <tr>
               <td className="border px-3 py-2">2025-08-05</td>
