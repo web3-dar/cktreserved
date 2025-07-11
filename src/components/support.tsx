@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { MessageCircle } from "lucide-react";
+import { useEffect } from "react";
+// import { MessageCircle } from "lucide-react";
 import { FaEnvelope } from "react-icons/fa";
 
 declare global {
@@ -10,38 +10,38 @@ declare global {
 }
 
 const SupportBot = () => {
-  const [chatraReady, setChatraReady] = useState(false);
+  // const [chatraReady, setChatraReady] = useState(false);
 
-  useEffect(() => {
+//   useEffect(() => {
    
-    window.ChatraID = "ZzBSDsiThaoDyxpLc";
+//     window.ChatraID = "ZzBSDsiThaoDyxpLc";
 
    
-    if (!document.getElementById("chatra-script")) {
-      const script = document.createElement("script");
-      script.id = "chatra-script";
-      script.src = "https://call.chatra.io/chatra.js";
-      script.async = true;
+//     if (!document.getElementById("chatra-script")) {
+//       const script = document.createElement("script");
+//       script.id = "chatra-script";
+//       script.src = "https://call.chatra.io/chatra.js";
+//       script.async = true;
 
-      // Detect when Chatra is ready
-      script.onload = () => {
-  const waitForChatra = () => {
-    if (window.Chatra) {
-      setChatraReady(true);
-    } else {
-      setTimeout(waitForChatra, 100); // Retry every 100ms
-    }
-  };
-  waitForChatra();
-};
+//       // Detect when Chatra is ready
+//       script.onload = () => {
+//   const waitForChatra = () => {
+//     if (window.Chatra) {
+//       setChatraReady(true);
+//     } else {
+//       setTimeout(waitForChatra, 100); // Retry every 100ms
+//     }
+//   };
+//   waitForChatra();
+// };
 
 
-      document.body.appendChild(script);
-    } else {
-      // If script already exists, assume it's ready
-      setChatraReady(true);
-    }
-  }, []);
+//       document.body.appendChild(script);
+//     } else {
+//       // If script already exists, assume it's ready
+//       setChatraReady(true);
+//     }
+//   }, []);
 
    useEffect(() => {
     // Load Tawk.to script
@@ -53,13 +53,13 @@ const SupportBot = () => {
     document.body.appendChild(script);
   }, []);
 
-  const openChat = () => {
-    if (window.Chatra) {
-      window.Chatra("openChat", true);
-    } else {
-    //   alert("Chat is still loading, please try again in a second.");
-    }
-  };
+  // const openChat = () => {
+  //   if (window.Chatra) {
+  //     window.Chatra("openChat", true);
+  //   } else {
+  //   //   alert("Chat is still loading, please try again in a second.");
+  //   }
+  // };
 
   return (
 
