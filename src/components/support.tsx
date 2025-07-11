@@ -15,7 +15,7 @@ const SupportBot = () => {
    
     window.ChatraID = "ZzBSDsiThaoDyxpLc";
 
-    // Load Chatra script
+   
     if (!document.getElementById("chatra-script")) {
       const script = document.createElement("script");
       script.id = "chatra-script";
