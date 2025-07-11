@@ -43,6 +43,16 @@ const SupportBot = () => {
     }
   }, []);
 
+   useEffect(() => {
+    // Load Tawk.to script
+    const script = document.createElement("script");
+    script.src = "https://embed.tawk.to/687139b2c15e2e191205da16/1ivt4iok2";
+    script.async = true;
+    script.charset = "UTF-8";
+    script.setAttribute("crossorigin", "*");
+    document.body.appendChild(script);
+  }, []);
+
   const openChat = () => {
     if (window.Chatra) {
       window.Chatra("openChat", true);
@@ -54,19 +64,7 @@ const SupportBot = () => {
   return (
 
     <>
-    <div className="fixed bottom-[100px] right-5 z-50 flex flex-col items-center space-y-1">
-     
-      <button
-        className={`p-3 rounded-full shadow-lg ${
-          chatraReady ? "bg-red-800 hover:bg-red-700" : "bg-gray-400 cursor-not-allowed"
-        } text-white`}
-        onClick={openChat}
-        // disabled={!chatraReady}
-      >
-        <MessageCircle size={24} />
-      </button>
-      <span className="text-sm text-black font-bold">Contact Us</span>
-    </div>
+   
    <div className="fixed bottom-[100px] left-5 z-50 flex flex-col items-center space-y-1">
   <a href="mailto:support@cktreservetrust.online">
     <button
