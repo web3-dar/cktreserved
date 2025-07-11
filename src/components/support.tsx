@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
+import { FaEnvelope } from "react-icons/fa";
 
 declare global {
   interface Window {
@@ -51,18 +52,35 @@ const SupportBot = () => {
   };
 
   return (
+
+    <>
     <div className="fixed bottom-[100px] right-5 z-50 flex flex-col items-center space-y-1">
+     
       <button
         className={`p-3 rounded-full shadow-lg ${
           chatraReady ? "bg-red-800 hover:bg-red-700" : "bg-gray-400 cursor-not-allowed"
         } text-white`}
         onClick={openChat}
-        disabled={!chatraReady}
+        // disabled={!chatraReady}
       >
         <MessageCircle size={24} />
       </button>
       <span className="text-sm text-black font-bold">Contact Us</span>
     </div>
+   <div className="fixed bottom-[100px] left-5 z-50 flex flex-col items-center space-y-1">
+  <a href="mailto:support@cktreservetrust.online">
+    <button
+      className="p-3 rounded-full shadow-lg bg-red-800 hover:bg-red-700 text-white"
+    >
+     <FaEnvelope/>
+    </button>
+  </a>
+  <span className="text-sm text-black font-bold">Email Us</span>
+</div>
+
+
+
+    </>
   );
 };
 
