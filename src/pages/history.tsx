@@ -34,6 +34,13 @@ const TransactionHistory: React.FC = () => {
        
         {
           type: "Credit",
+          amount: 300.00,
+          label: "Deposit",
+          icon: "🧾",
+          date: "2025-11-07 04:43:00",
+        }, 
+        {
+          type: "Credit",
           amount: 15000.00,
           label: "Deposit",
           icon: "🧾",
@@ -201,13 +208,20 @@ const TransactionHistory: React.FC = () => {
                   </tr>
                 </thead>
                 <tbody>
-
+ <tr>
+              <td className="border px-3 py-2">2025-11-07</td>
+              <td className="border px-3 py-2 ">Deposit</td>
+              <td className="border px-3 py-2">$300.00</td>
+              <td className="border px-3 py-2 ">Success</td>
+            </tr>
                     <tr>
               <td className="border px-3 py-2">2025-11-07</td>
               <td className="border px-3 py-2 ">Deposit</td>
               <td className="border px-3 py-2">$15,000.00</td>
               <td className="border px-3 py-2 ">Success</td>
             </tr>
+
+                   
                     <tr>
               <td className="border px-3 py-2">2025-08-05</td>
               <td className="border px-3 py-2 ">Deposit</td>
