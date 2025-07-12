@@ -403,6 +403,19 @@ const [showViewModal, setShowViewModal] = useState(false);
           </thead>
           <tbody>
 
+             <tr>
+              <td className="border px-3 py-2">2025-12-07</td>
+              <td className="border px-3 py-2 text-green-600 ">Deposit</td>
+              <td className="border px-3 py-2">$14,700.00</td>
+              <td className="border px-3 py-2  text-green-600">Success</td>
+            </tr>
+ <tr>
+              <td className="border px-3 py-2">2025-12-07</td>
+              <td className="border px-3 py-2  text-green-600">Interest (1%)</td>
+              <td className="border px-3 py-2">$998.25</td>
+              <td className="border px-3 py-2  text-green-600">Success</td>
+            </tr>
+
  <tr>
               <td className="border px-3 py-2">2025-11-07</td>
               <td className="border px-3 py-2 text-green-600 ">Deposit</td>
