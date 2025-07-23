@@ -1,0 +1,861 @@
+{
+  "users": [
+   
+   
+    {
+      "history": [
+        {
+          "date": "May 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,958.00",
+          "type": "debit"
+        },
+        {
+          "date": "Apr 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,960.50",
+          "type": "debit"
+        },
+        {
+          "date": "Mar 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,963.00",
+          "type": "debit"
+        },
+        {
+          "date": "Feb 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,965.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jan 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,968.00",
+          "type": "debit"
+        },
+        {
+          "date": "Dec 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,970.50",
+          "type": "debit"
+        },
+        {
+          "date": "Nov 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,972.50",
+          "type": "debit"
+        },
+        {
+          "date": "Oct 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,974.50",
+          "type": "debit"
+        },
+        {
+          "date": "Sep 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,976.50",
+          "type": "debit"
+        },
+        {
+          "date": "Aug 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,978.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jul 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,980.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jun 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,982.50",
+          "type": "debit"
+        },
+        {
+          "date": "May 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,984.50",
+          "type": "debit"
+        },
+        {
+          "date": "Apr 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,986.50",
+          "type": "debit"
+        },
+        {
+          "date": "Mar 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,988.50",
+          "type": "debit"
+        },
+        {
+          "date": "Feb 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,990.50",
+          "type": "debit"
+        }
+      ],
+      "confirmPassword": "Mellisa006",
+      "password": "Mellisa006",
+      "pin": "5050",
+      "accountSubType": "Savings",
+      "maritalStatus": "Single",
+      "dob": "2025-05-13",
+      "gender": "Male",
+      "profilePicture": "https://res.cloudinary.com/dx90y9zdx/image/upload/v1747262438/ukxgo6ymzsm2yygyhq4v.jpg",
+      "accountNumber": "0012709291",
+      "amount": 1383000,
+      "address": "Testing",
+      "accountType": "Personal",
+      "ssn": "123-45-4444",
+      "email": "adamitadamit5475@gmail.com",
+      "lastName": "Cannon",
+      "middleName": "",
+      "firstName": "John "
+    },
+    {
+      "history": [
+        {
+          "date": "May 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,958.00",
+          "type": "debit"
+        },
+        {
+          "date": "Apr 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,960.50",
+          "type": "debit"
+        },
+        {
+          "date": "Mar 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,963.00",
+          "type": "debit"
+        },
+        {
+          "date": "Feb 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,965.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jan 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,968.00",
+          "type": "debit"
+        },
+        {
+          "date": "Dec 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,970.50",
+          "type": "debit"
+        },
+        {
+          "date": "Nov 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,972.50",
+          "type": "debit"
+        },
+        {
+          "date": "Oct 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,974.50",
+          "type": "debit"
+        },
+        {
+          "date": "Sep 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,976.50",
+          "type": "debit"
+        },
+        {
+          "date": "Aug 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,978.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jul 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,980.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jun 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,982.50",
+          "type": "debit"
+        },
+        {
+          "date": "May 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,984.50",
+          "type": "debit"
+        },
+        {
+          "date": "Apr 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,986.50",
+          "type": "debit"
+        },
+        {
+          "date": "Mar 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,988.50",
+          "type": "debit"
+        },
+        {
+          "date": "Feb 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,990.50",
+          "type": "debit"
+        }
+      ],
+      "confirmPassword": "Litzy1@",
+      "password": "Litzy1@",
+      "pin": "0202",
+      "accountSubType": "Savings",
+      "maritalStatus": "Married",
+      "dob": "2025-07-02",
+      "gender": "Female",
+      "accountNumber": "002302390192",
+      "amount": 344955,
+      "address": "ok",
+      "accountType": "Personal",
+      "ssn": "747-47-4747",
+      "email": "litzybanuelos4@gmail.com",
+      "lastName": "Banuelos",
+      "middleName": "",
+      "firstName": "Litzy "
+    },
+    {
+      "history": [
+        {
+          "date": "May 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,958.00",
+          "type": "debit"
+        },
+        {
+          "date": "Apr 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,960.50",
+          "type": "debit"
+        },
+        {
+          "date": "Mar 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,963.00",
+          "type": "debit"
+        },
+        {
+          "date": "Feb 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,965.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jan 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,968.00",
+          "type": "debit"
+        },
+        {
+          "date": "Dec 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,970.50",
+          "type": "debit"
+        },
+        {
+          "date": "Nov 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,972.50",
+          "type": "debit"
+        },
+        {
+          "date": "Oct 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,974.50",
+          "type": "debit"
+        },
+        {
+          "date": "Sep 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,976.50",
+          "type": "debit"
+        },
+        {
+          "date": "Aug 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,978.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jul 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,980.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jun 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,982.50",
+          "type": "debit"
+        },
+        {
+          "date": "May 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,984.50",
+          "type": "debit"
+        },
+        {
+          "date": "Apr 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,986.50",
+          "type": "debit"
+        },
+        {
+          "date": "Mar 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,988.50",
+          "type": "debit"
+        },
+        {
+          "date": "Feb 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,990.50",
+          "type": "debit"
+        }
+      ],
+      "confirmPassword": "Lizbeth1!",
+      "password": "Lizbeth1!",
+      "pin": "5219",
+      "accountSubType": "Savings",
+      "maritalStatus": "Married",
+      "dob": "2025-07-16",
+      "gender": "Male",
+      "accountNumber": "011565453155",
+      "amount": 1693320,
+      "address": "OKKK",
+      "accountType": "Personal",
+      "ssn": "235-36-3636",
+      "email": "Lizbethindiana@gmail.com",
+      "lastName": "Dean",
+      "middleName": "S",
+      "firstName": "Lizbeth "
+    },
+    {
+      "history": [
+        {
+          "date": "May 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,958.00",
+          "type": "debit"
+        },
+        {
+          "date": "Apr 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,960.50",
+          "type": "debit"
+        },
+        {
+          "date": "Mar 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,963.00",
+          "type": "debit"
+        },
+        {
+          "date": "Feb 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,965.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jan 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,968.00",
+          "type": "debit"
+        },
+        {
+          "date": "Dec 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,970.50",
+          "type": "debit"
+        },
+        {
+          "date": "Nov 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,972.50",
+          "type": "debit"
+        },
+        {
+          "date": "Oct 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,974.50",
+          "type": "debit"
+        },
+        {
+          "date": "Sep 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,976.50",
+          "type": "debit"
+        },
+        {
+          "date": "Aug 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,978.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jul 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,980.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jun 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,982.50",
+          "type": "debit"
+        },
+        {
+          "date": "May 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,984.50",
+          "type": "debit"
+        },
+        {
+          "date": "Apr 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,986.50",
+          "type": "debit"
+        },
+        {
+          "date": "Mar 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,988.50",
+          "type": "debit"
+        },
+        {
+          "date": "Feb 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,990.50",
+          "type": "debit"
+        }
+      ],
+      "confirmPassword": "Duane123$",
+      "password": "Duane123$",
+      "pin": "2020",
+      "accountSubType": "Savings",
+      "maritalStatus": "Single",
+      "dob": "2025-07-29",
+      "gender": "Male",
+      "accountNumber": "012545354255",
+      "amount": 522430,
+      "address": "okk",
+      "accountType": "Personal",
+      "ssn": "363-63-6363",
+      "email": "Duanepeters003@gmail.com",
+      "lastName": "Ramos ",
+      "middleName": "",
+      "firstName": "Duane "
+    },
+    {
+      "history": [
+        {
+          "date": "May 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,958.00",
+          "type": "debit"
+        },
+        {
+          "date": "Apr 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,960.50",
+          "type": "debit"
+        },
+        {
+          "date": "Mar 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,963.00",
+          "type": "debit"
+        },
+        {
+          "date": "Feb 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,965.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jan 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,968.00",
+          "type": "debit"
+        },
+        {
+          "date": "Dec 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,970.50",
+          "type": "debit"
+        },
+        {
+          "date": "Nov 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,972.50",
+          "type": "debit"
+        },
+        {
+          "date": "Oct 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,974.50",
+          "type": "debit"
+        },
+        {
+          "date": "Sep 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,976.50",
+          "type": "debit"
+        },
+        {
+          "date": "Aug 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,978.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jul 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,980.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jun 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,982.50",
+          "type": "debit"
+        },
+        {
+          "date": "May 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,984.50",
+          "type": "debit"
+        },
+        {
+          "date": "Apr 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,986.50",
+          "type": "debit"
+        },
+        {
+          "date": "Mar 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,988.50",
+          "type": "debit"
+        },
+        {
+          "date": "Feb 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,990.50",
+          "type": "debit"
+        }
+      ],
+      "confirmPassword": "MyPaul344$!",
+      "password": "MyPaul344$!",
+      "pin": "2020",
+      "accountSubType": "Savings",
+      "maritalStatus": "Single",
+      "dob": "2025-07-01",
+      "gender": "Male",
+      "accountNumber": "009201265090",
+      "amount": 5831090,
+      "address": "ddd",
+      "accountType": "Personal",
+      "ssn": "222-22-2222",
+      "email": "Mypaul101@gmail.com",
+      "lastName": "Hernandez",
+      "middleName": "",
+      "firstName": "Paul"
+    },
+    {
+      "history": [
+        {
+          "date": "July 07, 2025",
+          "description": "Tradefx safebox deposit ref: pending…",
+          "amount": "$118,000",
+          "balance": "$0.00",
+          "type": "credit"
+        },
+        {
+          "date": "June 08, 2025",
+          "description": "Deposit Bitcoin investments",
+          "amount": "$1,000",
+          "balance": "$0.00",
+          "type": "credit"
+        },
+        {
+          "date": "July 06, 2025",
+          "description": "Deposit Bitcoin Investments",
+          "amount": "$2,000",
+          "balance": "$0.00",
+          "type": "credit"
+        },
+        {
+          "date": "June 01, 2025",
+          "description": "Deposit Bitcoin Investments",
+          "amount": "$500",
+          "balance": "$0.00",
+          "type": "credit"
+        },
+        {
+          "date": "July 17, 2025",
+          "description": "Deposit Bitcoin investments",
+          "amount": "$50,000",
+          "balance": "$0.00",
+          "type": "credit"
+        },
+        {
+          "date": "July 17, 2025",
+          "description": "Tradefx safebox deposit ref pending",
+          "amount": "$119,000",
+          "balance": "$0.00",
+          "type": "credit"
+        },
+        {
+          "date": "May 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,958.00",
+          "type": "debit"
+        },
+        {
+          "date": "Apr 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,960.50",
+          "type": "debit"
+        },
+        {
+          "date": "Mar 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,963.00",
+          "type": "debit"
+        },
+        {
+          "date": "Feb 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,965.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jan 05, 2025",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.50",
+          "balance": "$54,968.00",
+          "type": "debit"
+        },
+        {
+          "date": "Dec 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,970.50",
+          "type": "debit"
+        },
+        {
+          "date": "Nov 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,972.50",
+          "type": "debit"
+        },
+        {
+          "date": "Oct 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,974.50",
+          "type": "debit"
+        },
+        {
+          "date": "Sep 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,976.50",
+          "type": "debit"
+        },
+        {
+          "date": "Aug 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,978.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jul 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,980.50",
+          "type": "debit"
+        },
+        {
+          "date": "Jun 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,982.50",
+          "type": "debit"
+        },
+        {
+          "date": "May 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,984.50",
+          "type": "debit"
+        },
+        {
+          "date": "Apr 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,986.50",
+          "type": "debit"
+        },
+        {
+          "date": "Mar 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,988.50",
+          "type": "debit"
+        },
+        {
+          "date": "Feb 05, 2024",
+          "description": "Monthly Service Fee",
+          "amount": "-$2.00",
+          "balance": "$54,990.50",
+          "type": "debit"
+        }
+      ],
+      "confirmPassword": "BriannaBj1$",
+      "password": "Brironald2025.",
+      "pin": "4099",
+      "accountSubType": "Savings",
+      "maritalStatus": "Single",
+      "dob": "2025-07-19",
+      "gender": "Female",
+      "profilePicture": "https://res.cloudinary.com/dx90y9zdx/image/upload/v1752901137/gdh6jccuwvktgfzpdlfe.jpg",
+      "accountNumber": "002503310289",
+      "amount": 4743540,
+      "address": "okk",
+      "accountType": "Personal",
+      "ssn": "373-73-3737",
+      "email": "bj73798@gmail.com",
+      "lastName": "Teresi",
+      "middleName": "",
+      "firstName": "Brianna "
+    },
+    {
+      "confirmPassword": "Egan@2025",
+      "password": "Egan@2025",
+      "pin": "2222",
+      "accountSubType": "Savings",
+      "maritalStatus": "Single",
+      "dob": "1995-05-05",
+      "gender": "Male",
+      "profilePicture": "https://res.cloudinary.com/dx90y9zdx/image/upload/v1753271269/ngoeblnzbs8tw4sazrao.jpg",
+      "accountNumber": 123456789000,
+      "amount": 0,
+      "address": "1947 Patton Lane Cary, NC 27513",
+      "accountType": "Personal",
+      "ssn": "241-33-0912",
+      "email": "vinisherwayne@gmail.com",
+      "lastName": "Graphics",
+      "middleName": "Editing",
+      "firstName": "Turner"
+    }
+  ]
+}

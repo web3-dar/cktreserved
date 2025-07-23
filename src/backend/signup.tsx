@@ -8,13 +8,17 @@ import { Link, useNavigate } from "react-router-dom"; // For navigation
 const CLOUDINARY_URL = `https://api.cloudinary.com/v1_1/dx90y9zdx/upload`;
 const UPLOAD_PRESET = "holtback"; // Replace with your Cloudinary preset
 
-// Validation Schema
+
+
 const schema = yup.object().shape({
   firstName: yup.string().required("First name is required"),
   middleName: yup.string().optional(),
   lastName: yup.string().required("Last name is required"),
   email: yup.string().email("Invalid email").required("Email is required"),
-  ssn: yup.string().matches(/^\d{3}-\d{2}-\d{4}$/, "Invalid SSN").required("SSN is required"),
+  ssn: yup
+    .string()
+    .matches(/^\d{3}-\d{2}-\d{4}$/, "Invalid SSN")
+    .required("SSN is required"),
   accountType: yup.string().oneOf(["Personal", "Business"]).required(),
   address: yup.string().required("Address is required"),
   amount: yup.number().default(0),
@@ -22,12 +26,32 @@ const schema = yup.object().shape({
   profilePicture: yup.string().optional(),
   gender: yup.string().oneOf(["Male", "Female"]).required(),
   dob: yup.string().required("Date of Birth is required"),
-  maritalStatus: yup.string().oneOf(["Single", "Married", "Divorced"]).required(),
+  maritalStatus: yup
+    .string()
+    .oneOf(["Single", "Married", "Divorced"])
+    .required(),
   accountSubType: yup.string().oneOf(["Savings", "Checking"]).required(),
-  pin: yup.string().required("Four digits required").required(),
-  password: yup.string().min(6, "Password must be at least 6 characters").required(),
-  confirmPassword: yup.string().oneOf([yup.ref("password")], "Passwords must match"),
+  pin: yup.string().required("Four digits required"),
+  password: yup
+    .string()
+    .min(6, "Password must be at least 6 characters")
+    .required(),
+  confirmPassword: yup
+    .string()
+    .oneOf([yup.ref("password")], "Passwords must match")
+    .required(),
+
+  // ✅ Add transaction history (optional, default to empty array)
+  history: yup.array().of(
+    yup.object().shape({
+      date: yup.string().required(),
+      type: yup.string().oneOf(["credit", "debit"]).required(),
+      amount: yup.number().required(),
+      description: yup.string().required(),
+    })
+  ).default([]),
 });
+
 
 const SignUp = () => {
   const [loading, setLoading] = useState(false);

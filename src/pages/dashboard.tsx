@@ -27,6 +27,7 @@ import person from '../assets/person_1.jpg'
 import BottomNav from "./stickyNav";
 import BottomNav2 from "./bottomnav2";
 import SupportBot from "../components/support";
+// import { fetchHistoryForLoggedUser, Transaction } from "../backend/api";
 // import { sub } from "date-fns";
 
 // import Blog from "../Home/blog";
@@ -70,6 +71,8 @@ const [showViewModal, setShowViewModal] = useState(false);
     }
   }, []);
 
+  
+
   const handleLogout = () => {
     setIsLoading(true);
     setTimeout(() => {
@@ -100,35 +103,6 @@ const [showViewModal, setShowViewModal] = useState(false);
   }
 
 
-  // const allTransactions = [
-  //   { type: "Deposit", amount: userAmount , date: "2025-02-11 09:00:00" },
-
-  // ];
-
-  // const getGreeting = () => {
-  //   const hour = new Date().getHours();
-  //   if (hour < 12) return "Good morning";
-  //   if (hour < 18) return "Good afternoon";
-  //   return "Good evening";
-  // };
-
-  // const loadMoreTransactions = () => {
-  //   setVisibleTransactions((prev) =>
-  //     Math.min(prev + 4, allTransactions.length)
-  //   );
-  // };
-
-  // const maskBalance = (amount: number) => {
-  //   return amount.toLocaleString().replace(/\d/g, "*");
-  // };
-
-  // const refreshPage = () => {
-  //   window.location.reload();
-  // };
-
-  // const toggleBalanceVisibility = () => {
-  //   setShowBalance((prev) => !prev);
-  // };
 
   return (
     <>
@@ -386,12 +360,12 @@ const [showViewModal, setShowViewModal] = useState(false);
         <p>Account Number: <strong>{AcctNum}</strong></p>
         <p>Routine Number: <strong>233293939</strong></p>
         <p>Account Balance: <strong>${userAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</strong></p>
-        <p>Last Deposit Date: <strong>July 19, 2025</strong></p>
+        {/* <p>Last Deposit Date: <strong>July 19, 2025</strong></p> */}
         <p>Deposit Reference Number: <strong>2234-WN7823490</strong></p>
         <p className="text-green-600 font-semibold mt-2">Status: Funds Available for Payout</p>
       </div>
 
-      <div className="overflow-x-auto">
+      {/* <div className="overflow-x-auto">
         <table className="w-full border text-sm text-left mb-6">
           <thead>
             <tr className="bg-gray-100 text-gray-700">
@@ -474,7 +448,7 @@ const [showViewModal, setShowViewModal] = useState(false);
             </tr>
           </tbody>
         </table>
-      </div>
+      </div> */}
 
       <p className="text-xs text-gray-500 text-center">
         This dashboard reflects the most current status of your winnings under the Camellia K Talachi Mega Bonus Program.<br />
