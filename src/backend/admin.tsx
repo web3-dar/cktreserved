@@ -233,22 +233,23 @@ please don't delete all the accounts, minimum of one should be left
       <h4 className="font-semibold mt-4 mb-2">Add New Entry</h4>
       <form
         onSubmit={(e) => {
-          e.preventDefault();
-          const form = e.target as HTMLFormElement;
-          const newEntry = {
-            date: (form.date as any).value,
-            amount: (form.amount as any).value,
-            description: (form.description as any).value,
-            balance: (form.balance as any).value,
-            type: (form.type as any).value,
-          };
-          const updated = {
-            ...selectedHistoryUser,
-            history: [...(selectedHistoryUser.history || []), newEntry],
-          };
-          setSelectedHistoryUser(updated);
-          form.reset();
-        }}
+  e.preventDefault();
+  const form = e.target as HTMLFormElement;
+  const newEntry = {
+    date: (form.date as any).value,
+    amount: (form.amount as any).value,
+    description: (form.description as any).value,
+    balance: (form.balance as any).value,
+    type: (form.type as any).value,
+  };
+  const updated = {
+    ...selectedHistoryUser,
+    history: [newEntry, ...(selectedHistoryUser.history || [])], // ⬅ add to top
+  };
+  setSelectedHistoryUser(updated);
+  form.reset();
+}}
+
         className="space-y-2"
       >
         <input type="date" name="date" className="w-full border p-2 rounded" required />
